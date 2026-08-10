@@ -22,13 +22,13 @@ div.center{
 
 p{
   color: #141414;
-  font-size: x-large;
+  font-size: 2vw;
   text-shadow: 1px 1px 5px #1414145b;
   font-family: "Times New Roman", Times, serif;
 }
 .noshadow{
   color: #141414;
-  font-size: x-large;
+  font-size: 2vw;
   text-shadow:none;
   font-family: "Times New Roman", Times, serif;
 }
@@ -63,7 +63,7 @@ p{
 }
 .booklogo:hover {
   /* Apply styles on hover, including the box-shadow and starting the animation */
-  animation: lift 1s linear forwards; 
+  animation: liftbig 1s linear forwards; 
 }
 
 .button {
@@ -75,7 +75,7 @@ p{
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 2vw;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -105,24 +105,32 @@ p{
 /**Book stuff with Spinning thing behind it**/
 .book {
   position: relative;
-  max-width: 45%;
+  max-width: 40%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center;
 }
-
-.booktop{
-  margin-top: 10%;
-  box-shadow: none; 
+.solo{
   position: relative;
-  max-width: 45%;
+  max-width: 30%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center;
 }
-
+.top{
+  margin-top: 10%;
+}
+.topalt{
+  margin-top: 2%;
+}
+.bottom{
+  margin-bottom: 5%;
+}
+.middle{
+  margin-bottom: 4%;
+}
 table.wattpaad{
   margin-left: auto;
   margin-right: auto;
@@ -140,10 +148,6 @@ table.wattpaad{
   text-align:right;
 }
 
-/**Yes, I did use a different class system for top and bottom. Don't ask me why**/
-.bottom{
-  margin-bottom: 5%;
-}
 .book-cover {
   width: 100%;
   height: 100%;
@@ -261,7 +265,7 @@ z-index: 3;
 .navbar a {
 
 text-decoration: none;
-font-size: 17px;
+font-size: 2vw;
 font-weight: bold;
 color: white;
 text-align: center;
@@ -275,7 +279,7 @@ z-index: 3;
 }
 
 .sub-menu .btn {
-font-size: 17px;  
+font-size: 2vw;  
 outline: none;
 color: white;
 padding: 15px 15px;
@@ -299,7 +303,7 @@ width: max-content;
 .content a {
 color: white;
 text-decoration: none;
-font-size: 15px;
+font-size: 2vw;
 }
 .navbar a:hover, .content a:hover {
 background-color: #eee;
@@ -407,31 +411,29 @@ display: block;
   to {opacity: 1}
 }
 
-/*Scrolling Box*/
-.scrolling-container-front {
-  height: 30vh; /* Use vh (viewport height) instead of a percentage for better responsiveness */
-  overflow: hidden;
-  top: 0px;
-  z-index: 1;
-  position: relative;
+.hero-text {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.scrolling-container-back {
-  height: 30vh; /* Use vh (viewport height) instead of a percentage for better responsiveness */
+/*Scrolling Box*/
+
+.scrolling-container {
+  height: 25%; /* Use vh (viewport height) instead of a percentage for better responsiveness */
   overflow: hidden;
-  z-index: -1;
-  top: 7%;
   position: absolute;
 }
 
 .scrolling-content {
-  animation: scroll-up-int 20s linear infinite; /* Adjust the duration as needed */
+  animation: scroll-up-int 200s linear infinite; /* Adjust the duration as needed */
   transform: translateY(0); /* Ensure initial position */
-  z-index: 1;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
 }
-.scrolling-content-backup {
-  animation: scroll-up 20s linear infinite; /* Adjust the duration as needed */
-  animation-delay: 18.95s; /* Add a 2-second delay before the animation starts */
-}
+
 /*Perhaps create new pic to show always*/
 
 @keyframes scroll-up-int {
@@ -470,9 +472,27 @@ display: block;
   background-repeat: no-repeat; /* Prevent the background image from repeating */
   box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.36);
 }
+
+/*Char Table Stuff*/
+.char-table th, td {
+  border-style: none;
+}
+.char-table td {
+  width: 25%;
+}
+.char-table table{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  background-image: url('../Media/Single\ Shelf.png');
+  aspect-ratio: 16 / 3; /* Maintain a 16:9 aspect ratio */
+  background-size: 100% 100%; /* Cover the entire table */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  box-shadow: 0px 3px 17px -3px rgba(0,0,0,0.36);
+}
+
 .container {
   width: 94%; /* Set the width of the container to 90% of the viewport width */
-  border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
 }

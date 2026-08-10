@@ -11,7 +11,7 @@
 <body>
 
   <div class="navbar">
-    <a href="Index.html">Home</a>
+    <a href="../Index.html">Home</a>
     <a href="Characters.html">Characters</a>
     <a href="Stories.html">Stories</a>
     <div class="sub-menu">
@@ -25,23 +25,40 @@
 
 
 <!--Still can't get scroll to wrap on first wrap.-->
-<div class="scrolling-container-front">
-  <img src="../Media/HeroText.png" class="text">
-  <div class="scrolling-content">
-     <img src="../Media/ArcChars.png" style="width: 100%;" alt="Characters!">
-  </div>
-</div>
-<div class="scrolling-container-back">
-    <div class="scrolling-content-backup">
-      <img src="../Media/ArcChars.png" style = "width: 100%;" alt="Characters">
+
+<div class="scrolling-container">
+    <div class="hero-text">
+      <img src="../Media/HeroText.png" style = "width: 100%;" alt="Character Text">
     </div>
+     <div class="scrolling-content">
+      <!--A sad attempt at a loop-->
+      <img src="../Media/ArcChars.png" style = "width: 100%;" alt="Characters">
+      <img src="../Media/ArcChars.png" style = "width: 100%;" alt="Characters">
+      <img src="../Media/ArcChars.png" style = "width: 100%;" alt="Characters">
+      <img src="../Media/ArcChars.png" style = "width: 100%;" alt="Characters">
+      <img src="../Media/ArcChars.png" style = "width: 100%;" alt="Characters">
+      <!--The image still isn't seemless?-->
+    </div>
+  
 </div>
 
 </div>
 
 <div>
   <br>
-  <!-- Spacing -->
+  <!--Basic Spacing -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
 </div>
 <!-- Slideshow container -->
@@ -49,31 +66,78 @@
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="../Media/SilverSurfer.png" style="width:100%">
+    <div class="numbertext">1 / 5</div>
+    <img src="../Media/HorizontalArcPosters/1.png" style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="../Media/MultipleMan.png" style="width:100%">
+    <div class="numbertext">2 / 5</div>
+    <img src="../Media/HorizontalArcPosters/2.png" style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="../Media/Jubilee.png" style="width:100%">
+    <div class="numbertext">3 / 5</div>
+    <img src="../Media/HorizontalArcPosters/3.png" style="width:100%">
   </div>
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="../Media/HorizontalArcPosters/4.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="../Media/HorizontalArcPosters/5.png" style="width:100%">
+  </div>
+
+
+  <!--Next and previous buttons-->
+  <a class="prev" onclick="minusSlides()">&#10094;</a>
+  <a class="next" onclick="plusSlides()">&#10095;</a>
 </div>
 <br>
 
 <!-- The dots/circles -->
 <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(0)"></span>
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<div class = "container char-table">
+    <table class="char-table">
+        <tr>
+          <td>   
+            <div class="book solo">  <!-- Compendium 1 -->
+            <a target="_blank" href="../Media/Books/Arc Char Comp Vol. 1.pdf"><img src="../Media/Arc Char Comp Vol. 1 Cover.png" alt="Transaction Tavern Season 1" class="book-cover"> </a>
+            <div class="book-overlay">
+            <img src="../Media/Focus.png" alt="Spinning Image 1" class="spinning-image">
+            </div>
+            </div>
+          </td>
+          <td>   
+         <div class="book solo">  <!-- Compendium 1 -->
+            <a target="_blank" href="../Media/Books/Arc Char Comp Vol. 1.pdf"><img src="../Media/Arc Char Comp Vol. 1 Cover.png" alt="Transaction Tavern Season 1" class="book-cover"> </a>
+            <div class="book-overlay">
+            <img src="../Media/Focus.png" alt="Spinning Image 1" class="spinning-image">
+            </div>
+            </div>
+          </td>
+      
+          <td>   
+            <div class="book solo">  <!-- Compendium 1 -->
+            <a target="_blank" href="../Media/Books/Arc Char Comp Vol. 1.pdf"><img src="../Media/Arc Char Comp Vol. 1 Cover.png" alt="Transaction Tavern Season 1" class="book-cover"> </a>
+            <div class="book-overlay">
+            <img src="../Media/Focus.png" alt="Spinning Image 1" class="spinning-image">
+            </div>
+            </div>
+          </td>
+        </tr>
+       
+       
+    </table>  
 </div>
 
 <div>
