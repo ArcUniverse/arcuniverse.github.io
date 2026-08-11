@@ -421,24 +421,32 @@ display: block;
 /*Scrolling Box*/
 
 .scrolling-container {
-  height: 25vh; /* Use vh (viewport height) instead of a percentage for better responsiveness */
-  width: 100%;
+  height: 25vh; /* Sets fixed height for the viewport */
   overflow: hidden;
-  position: relative;
+  position: relative; /* Keeps container in normal document flow */
+  width: 100%;
+  display: grid; /* Enforces layout bounds on mobile */
+  margin-bottom: 2rem; /* Creates clean space between container and slideshow */
 }
 
 .scrolling-content {
-  animation: scroll-up-int 200s linear infinite; /* Adjust the duration as needed */
-  transform: translateY(0); /* Ensure initial position */
+  animation: scroll-up-int 200s linear infinite;
+  transform: translateY(0);
   margin: 0;
   padding: 0;
-  z-index: 0;
+  width: 100%;
+}
+
+.scrolling-content img {
+  width: 100%;
+  display: block; /* Removes image inline padding gaps */
 }
 
 .slideshow-container-character {
-  margin-top: 2rem; /* Clean CSS spacing instead of multiple <br> tags */
-  position: relative;
+  position: relative; /* Ensures it stacks cleanly below */
+  clear: both; /* Prevents floating elements from overlapping */
   width: 100%;
+  z-index: 1; /* Ensures slideshow sits above background layers if needed */
 }
 
 /*Perhaps create new pic to show always*/
