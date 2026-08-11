@@ -421,7 +421,8 @@ display: block;
 /*Scrolling Box*/
 
 .scrolling-container {
-  height: 25%; /* Use vh (viewport height) instead of a percentage for better responsiveness */
+  height: 25vh; /* Use vh (viewport height) instead of a percentage for better responsiveness */
+  width: 100%;
   overflow: hidden;
   position: absolute;
 }
