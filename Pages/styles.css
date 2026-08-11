@@ -424,7 +424,7 @@ display: block;
   height: 25vh; /* Use vh (viewport height) instead of a percentage for better responsiveness */
   width: 100%;
   overflow: hidden;
-  position: absolute;
+  position: relative;
 }
 
 .scrolling-content {
@@ -433,6 +433,12 @@ display: block;
   margin: 0;
   padding: 0;
   z-index: 0;
+}
+
+.slideshow-container-character {
+  margin-top: 2rem; /* Clean CSS spacing instead of multiple <br> tags */
+  position: relative;
+  width: 100%;
 }
 
 /*Perhaps create new pic to show always*/
