@@ -420,33 +420,56 @@ display: block;
 }
 /*Scrolling Box*/
 
-.scrolling-container {
-  height: 25vh; /* Sets fixed height for the viewport */
-  overflow: hidden;
-  position: relative; /* Keeps container in normal document flow */
-  width: 100%;
-  display: grid; /* Enforces layout bounds on mobile */
-  margin-bottom: 2rem; /* Creates clean space between container and slideshow */
+/* 1. Ensure page body/wrapper doesn't cause overflow collapses */
+body {
+  overflow-x: hidden;
 }
 
-.scrolling-content {
-  animation: scroll-up-int 200s linear infinite;
-  transform: translateY(0);
-  margin: 0;
-  padding: 0;
+/* 2. Force scrolling-container to hold its physical height on mobile */
+.scrolling-container {
+  display: flex;
+  flex-direction: column;
+  height: 250px; /* Hardcoded fallback height guarantees it can NEVER collapse to 0px */
+  height: 25svh; /* Scales on modern mobile viewports */
+  min-height: 200px; /* Prevents it from shrinking too tiny on small phones */
   width: 100%;
+  overflow: hidden;
+  position: relative; /* Keeps container in normal page order */
+  margin-bottom: 2rem; /* Creates physical distance from the slideshow */
+}
+
+/* 3. Ensure hero text doesn't collapse layout */
+.hero-text {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.hero-text img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 4. Fix scrolling content layer */
+.scrolling-content {
+  width: 100%;
+  animation: scroll-up-int 200s linear infinite;
+  will-change: transform;
 }
 
 .scrolling-content img {
   width: 100%;
-  display: block; /* Removes image inline padding gaps */
+  height: auto;
+  display: block;
 }
 
+/* 5. Force slideshow below the container */
 .slideshow-container-character {
-  position: relative; /* Ensures it stacks cleanly below */
-  clear: both; /* Prevents floating elements from overlapping */
+  position: relative;
   width: 100%;
-  z-index: 1; /* Ensures slideshow sits above background layers if needed */
+  clear: both; /* Breaks out of any floating elements */
+  margin-top: 1rem;
 }
 
 /*Perhaps create new pic to show always*/
